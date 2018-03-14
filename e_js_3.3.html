@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // function countBs(x) {
+        //     var y = 0;
+        //     for (i = 0; i < x.lenght; i++) {
+        //         if (x.charAt(i) == "B"){
+        //             y += 1;
+        //         }
+        //     }
+        //     return y;
+        // }
+        function countBs_new(x) {
+            countChar(x, "B");
+        }
+        function countChar(x, y) {
+            var z = 0;
+            for (i = 0; i < x.lenght; i++) {
+                if (x.charAt(i) == y){
+                    z += 1;
+                }
+            }
+            return z;
+        }
+        console.log(countBs("AABBCCDDBBCCAASDDASDGSDFGHREW"));
+        console.log(countChar("alasksldfaslfjgj", "a"));        
+    </script>
+</body>
+</html>
