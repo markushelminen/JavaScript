@@ -1,4 +1,5 @@
 # JavaScript
 Raw Sauce
 
-This reprository has eloquent javascript exercises
+EJS = Eloquent JavaScript
+
