@@ -1,0 +1,70 @@
+<html>
+    <head>
+    <script>
+        var result = 0;
+        var val1 = 0;
+        var val2 = 0;
+        var comp = "+";
+        var counter = 0;
+        function number(value){
+            console.log(value);
+            if (value != "+" || value != "-") {
+        
+                if (counter == 0) {
+                    val1 += value;
+                    document.getElementById("vl1").innerHTML = val1;
+                    
+                } else if (counter == 1) {
+                    val2 += value;
+                    counter = 0;
+                    document.getElementById("vl2").innerHTML = val2;
+                    
+                } else {
+                    console.log("ERROR1");
+                }
+            } else {
+                comp = value;
+                document.getElementById("cc").innerHTML = comp;
+                counter++;
+                
+            }
+        }
+
+        function count(num1, num2, x){
+            if (x == "+") {
+                result = num1 + num2;
+                document.getElementById("res").innerHTML = result;
+            } else if (x == "-") {
+                result = num1 - num2;
+                document.getElementById("res").innerHTML = result;
+            } else {
+                console.log("ERROR2");
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <h2>Laskuri</h2>
+        <button onclick= "number(7)">7</button>
+        <button onclick= "number(8)">8</button>
+        <button onclick= "number(9)">9</button>
+        <br>
+        <button onclick= "number(4)">4</button>
+        <button onclick= "number(5)">5</button>
+        <button onclick= "number(6)">6</button>
+        <br>
+        <button onclick= "number(3)">1</button>
+        <button onclick= "number(2)">2</button>
+        <button onclick= "number(1)">3</button>
+        <br>
+        <button onclick= "number(0)">0</button>
+        <button onclick= 'number("+")'>+</button>
+        <button onclick= 'number("-")'>-</button>
+        <br>
+        <button onclick="count(val1, val2, comp)"> = </button>
+        <p id="vl1">Value 1</p>
+        <p id="cc">Operator</p>
+        <p id="vl2">Value 2</p>
+        <p id="res">Result</p>
+    </body>
+</html>
